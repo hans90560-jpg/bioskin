@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { siteAssetPath } from "@/lib/site-asset-path";
 import { HeroReveal } from "./hero-reveal";
 
 export function Hero() {
@@ -44,7 +45,7 @@ export function Hero() {
           <div className="hero__image-wrap">
             <Image
               className="hero__image"
-              src="/images/sarah-suncare.png"
+              src={siteAssetPath("/images/sarah-suncare.png")}
               alt="SARAH SUNCARE 선케어 제품"
               width={1024}
               height={1536}

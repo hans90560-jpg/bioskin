@@ -5,6 +5,7 @@ import { IndustryCards } from "@/components/product/industry-cards";
 import { ScrollReveal } from "@/components/product/scroll-reveal";
 import { TechnicalPrinciple } from "@/components/product/technical-principle";
 import { SiteHeader } from "@/components/site-header";
+import { siteAssetPath } from "@/lib/site-asset-path";
 import {
   evaluationSteps,
   productFeatures,
@@ -45,7 +46,7 @@ export default function ProductPage() {
                 <span className="product-intro__orbit" aria-hidden="true" />
                 <Image
                   className="product-intro__image"
-                  src="/images/sarah-suncare.png"
+                  src={siteAssetPath("/images/sarah-suncare.png")}
                   alt="하늘색과 흰색 패키지의 SARAH SUNCARE 선케어 제품"
                   width={1024}
                   height={1536}
@@ -194,7 +195,7 @@ export default function ProductPage() {
               <figure className="evaluation-panel__figure">
                 <Image
                   className="evaluation-panel__image"
-                  src="/images/e-skin.png"
+                  src={siteAssetPath("/images/e-skin.png")}
                   alt="세포를 배양해 전층배양피부를 구성하는 과정을 나타낸 E-SKIN 참고 도식"
                   width={1431}
                   height={266}

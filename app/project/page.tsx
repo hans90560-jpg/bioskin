@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ScrollReveal } from "@/components/product/scroll-reveal";
 import { ProjectStats } from "@/components/project/project-stats";
 import { SiteHeader } from "@/components/site-header";
+import { siteAssetPath } from "@/lib/site-asset-path";
 import {
   evaluationKeywords,
   experimentConditions,
@@ -88,7 +89,7 @@ export default function ProjectPage() {
 
               <figure className="project-figure project-overview__figure">
                 <Image
-                  src="/images/project/project-team.jpg"
+                  src={siteAssetPath("/images/project/project-team.jpg")}
                   alt="기업멘토, 지도교수와 숭실대학교 화학공학과 프로젝트팀이 함께 촬영한 단체사진"
                   width={1800}
                   height={1409}
@@ -130,7 +131,7 @@ export default function ProjectPage() {
               <figure className="project-figure project-technology__figure">
                 <div className="project-technology__source-label">기업 제공 자료</div>
                 <Image
-                  src="/images/project/technology-concept.jpg"
+                  src={siteAssetPath("/images/project/technology-concept.jpg")}
                   alt="HIPE 에멀전, 스파이크 구조와 색 변화 개념을 연결해 표현한 기업 제공 기술 개념도"
                   width={1080}
                   height={440}
@@ -343,7 +344,7 @@ export default function ProjectPage() {
                 <div className="experiment-entry__gallery experiment-entry__gallery--first">
                   <figure className="project-figure">
                     <Image
-                      src="/images/project/experiment-seeding.jpg"
+                      src={siteAssetPath("/images/project/experiment-seeding.jpg")}
                       alt="연구실 안전 작업대에서 표피세포 시딩을 수행하는 프로젝트 참여자"
                       width={1400}
                       height={1867}
@@ -353,7 +354,7 @@ export default function ProjectPage() {
                   </figure>
                   <figure className="project-figure">
                     <Image
-                      src="/images/project/experiment-lab.jpg"
+                      src={siteAssetPath("/images/project/experiment-lab.jpg")}
                       alt="지도교수와 프로젝트팀이 피부모델 실험을 학습한 연구실 활동 사진"
                       width={1800}
                       height={1380}
@@ -395,7 +396,7 @@ export default function ProjectPage() {
                 <div className="experiment-entry__second-layout">
                   <figure className="project-figure">
                     <Image
-                      src="/images/project/experiment-samples.jpg"
+                      src={siteAssetPath("/images/project/experiment-samples.jpg")}
                       alt="PDMS 링 안에 선크림 도포를 마치고 UV 조사를 앞둔 인공피부 시료"
                       width={1600}
                       height={1200}
@@ -474,7 +475,7 @@ export default function ProjectPage() {
                   <div className="meeting-entry__gallery meeting-entry__gallery--kickoff">
                     <figure className="project-figure">
                       <Image
-                        src="/images/project/kickoff-online-redacted.jpg"
+                        src={siteAssetPath("/images/project/kickoff-online-redacted.jpg")}
                         alt="참가자 숫자 식별자를 가린 2026년 6월 온라인 킥오프 화상회의 화면"
                         width={535}
                         height={538}
@@ -484,7 +485,7 @@ export default function ProjectPage() {
                     </figure>
                     <figure className="project-figure project-figure--native-size">
                       <Image
-                        src="/images/project/skin-model-training-redacted.jpg"
+                        src={siteAssetPath("/images/project/skin-model-training-redacted.jpg")}
                         alt="참가자 목록을 제외한 전층배양피부 구조와 제작 원리 교육 슬라이드 공유 화면"
                         width={348}
                         height={246}
@@ -531,7 +532,7 @@ export default function ProjectPage() {
                   </div>
                   <figure className="project-figure meeting-entry__wide-photo">
                     <Image
-                      src="/images/project/company-meeting.jpg"
+                      src={siteAssetPath("/images/project/company-meeting.jpg")}
                       alt="숭실대학교 테크스테이션에서 기업멘토와 프로젝트팀이 제품과 조사 방향을 논의하는 모습"
                       width={1800}
                       height={1350}
@@ -586,7 +587,7 @@ export default function ProjectPage() {
 
             <figure className="project-figure collaboration-record">
               <Image
-                src="/images/project/online-collaboration-redacted.jpg"
+                src={siteAssetPath("/images/project/online-collaboration-redacted.jpg")}
                 alt="학생 숫자 식별자를 가린 프로젝트팀의 온라인 화상회의 화면"
                 width={1800}
                 height={830}
@@ -626,7 +627,7 @@ export default function ProjectPage() {
               </div>
               <figure className="project-figure">
                 <Image
-                  src="/images/project/content-planning.jpg"
+                  src={siteAssetPath("/images/project/content-planning.jpg")}
                   alt="프로젝트팀이 회의실 화면을 보며 콘텐츠 제작 방향을 논의하는 모습"
                   width={1600}
                   height={1200}

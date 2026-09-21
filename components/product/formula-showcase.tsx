@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { siteAssetPath } from "@/lib/site-asset-path";
 import { useState } from "react";
 import { formulaShowcaseGroups } from "@/content/product-content";
 
@@ -19,7 +20,7 @@ export function FormulaShowcase() {
             <div className="formula-visual__media">
               <Image
                 className="formula-visual__image"
-                src={group.image}
+                src={siteAssetPath(group.image)}
                 alt={group.imageAlt}
                 width={1448}
                 height={1086}

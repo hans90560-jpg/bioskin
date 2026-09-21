@@ -4,6 +4,7 @@ import Link from "next/link";
 import { MarketGrowthStat } from "@/components/market/market-growth-stat";
 import { ScrollReveal } from "@/components/product/scroll-reveal";
 import { SiteHeader } from "@/components/site-header";
+import { siteAssetPath } from "@/lib/site-asset-path";
 import {
   additionalSupplyCases,
   furtherDirections,
@@ -135,7 +136,7 @@ export default function MarketAnalysisPage() {
                 <summary>조사 자료 보기</summary>
                 <div className="market-evidence__body">
                   <figure>
-                    <Image src="/images/market/oliveyoung-article-source.png" alt="CJ올리브영 서바이벌 뷰티 보도자료 제목과 발표일이 보이는 제공 캡처" width={927} height={515} sizes="(min-width: 900px) 760px, 92vw" />
+                    <Image src={siteAssetPath("/images/market/oliveyoung-article-source.png")} alt="CJ올리브영 서바이벌 뷰티 보도자료 제목과 발표일이 보이는 제공 캡처" width={927} height={515} sizes="(min-width: 900px) 760px, 92vw" />
                     <figcaption>CJ올리브영 공식 보도자료 제공 캡처. 핵심 수치의 기간과 비교 기준은 위 본문에 웹 텍스트로 제공했습니다.</figcaption>
                   </figure>
                 </div>
@@ -152,7 +153,7 @@ export default function MarketAnalysisPage() {
                 {supplyCases.map((item, index) => (
                   <article className="market-supply-case" data-reveal-item key={item.id}>
                     <figure className={`market-supply-case__figure market-supply-case__figure--${item.id.toLowerCase()}`}>
-                      <Image src={item.image} alt={item.alt} width={item.width} height={item.height} sizes="(min-width: 1000px) 46vw, 92vw" />
+                      <Image src={siteAssetPath(item.image)} alt={item.alt} width={item.width} height={item.height} sizes="(min-width: 1000px) 46vw, 92vw" />
                       <figcaption>{item.id === "C" ? "제공된 COSMAX·KEMINOVA 전시 부스 사진. 행사명·장소·촬영일 미확인." : "제공 자료에서 확인한 조사 사례 이미지."}</figcaption>
                     </figure>
                     <div className="market-supply-case__copy">
@@ -166,7 +167,7 @@ export default function MarketAnalysisPage() {
                         <details className="market-inline-evidence">
                           <summary>제공된 실적 기사 캡처 확인</summary>
                           <figure>
-                            <Image src="/images/market/cosmax-results-article-source.png" alt="코스맥스 실적 관련 제공 기사 캡처" width={547} height={302} sizes="(min-width: 900px) 480px, 88vw" />
+                            <Image src={siteAssetPath("/images/market/cosmax-results-article-source.png")} alt="코스맥스 실적 관련 제공 기사 캡처" width={547} height={302} sizes="(min-width: 900px) 480px, 88vw" />
                             <figcaption>제공된 기사 캡처. 회사 전체 실적을 선케어 부문 실적으로 사용하지 않았습니다.</figcaption>
                           </figure>
                         </details>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { siteAssetPath } from "@/lib/site-asset-path";
 import { useState } from "react";
 import { industries } from "@/content/product-content";
 
@@ -30,7 +31,7 @@ export function IndustryCards() {
             <div className="industry-card__media">
               <Image
                 className="industry-card__image"
-                src={industry.image}
+                src={siteAssetPath(industry.image)}
                 alt={industry.imageAlt}
                 width={industry.imageWidth}
                 height={212}

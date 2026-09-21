@@ -236,3 +236,12 @@ body
 - 콘텐츠를 숨긴 채 JavaScript 성공에 의존하는 구현
 - 클릭되지 않는 요소에 링크/버튼 역할을 흉내 내는 구현
 - 삼성바이오로직스의 코드, 이미지, 로고, 고유 문구 또는 디자인 복제
+
+## 14. GitHub Pages 배포
+
+- 로컬 개발에서는 기존 루트 경로(`/`)와 Next.js 이미지 처리를 유지한다.
+- Pages 빌드에서는 `NEXT_PUBLIC_BASE_PATH=/bioskin`을 지정한다. `next.config.ts`가 이 값으로 정적 내보내기(`output: "export"`), `basePath`, `trailingSlash`와 이미지 원본 제공을 활성화한다.
+- `next/link`의 내부 경로는 Next.js가 `basePath`를 적용한다. `public/images/` 자산은 `lib/site-asset-path.ts`로 같은 접두 경로를 적용한다.
+- `.github/workflows/deploy-pages.yml`은 `main` 푸시 또는 수동 실행 시 npm 의존성 설치, lint, 정적 빌드를 수행하고 `out/`을 GitHub Pages에 배포한다. `public/.nojekyll`은 게시 산출물에 포함한다.
+- GitHub 저장소의 Settings → Pages → Build and deployment → Source는 **GitHub Actions**로 선택해야 한다. 정적 산출물은 저장소 루트가 아니라 워크플로의 `out/` 아티팩트에서 제공한다.
+- 공개 주소는 기본 프로젝트 사이트 설정에서 `https://hans90560-jpg.github.io/bioskin/`이다. 커스텀 도메인이나 저장소 이름이 바뀌면 base path 설정을 함께 갱신한다.
