@@ -121,6 +121,9 @@ a {
 }
 
 .site-header__contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 42px;
   flex: none;
   padding: 0.6rem 1.25rem;
@@ -131,7 +134,13 @@ a {
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  cursor: default;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.site-header__contact:hover {
+  background: var(--pale-blue);
 }
 
 .site-header__contact:focus-visible {

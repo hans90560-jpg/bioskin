@@ -33,14 +33,15 @@ export function SiteHeader() {
             2026년 현장형 기술 문제 해결 프로젝트
           </Link>
         </div>
-        <button
+        <a
           className="site-header__contact"
-          type="button"
-          aria-disabled="true"
-          title="현재 준비 중입니다"
+          href="https://www.instagram.com/sarasun5502/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contact Us: 인스타그램 @sarasun5502 (새 창)"
         >
           Contact Us
-        </button>
+        </a>
       </div>
     </header>
   );

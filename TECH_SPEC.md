@@ -90,7 +90,7 @@ App Router의 파일 기반 경로를 사용한다.
 
 - 탐색 카드는 Next.js `Link`를 사용하고 카드 전체 영역을 하나의 링크로 만든다.
 - 공통 헤더의 프로젝트명은 `Link href="/"`를 사용한다. 상세 페이지에서는 기본 App Router 이동으로 홈 최상단을 열고, 이미 홈인 경우 `onNavigate`에서 이동을 가로채 `window.scrollTo`를 호출한다. 스크롤 방식은 `matchMedia('(prefers-reduced-motion: reduce)')` 결과에 따라 `smooth` 또는 `auto`로 선택한다.
-- `Contact Us`는 이번 버전에서 목적지가 없는 네이티브 `button type="button"`으로 구현한다. 링크나 클릭 핸들러를 연결하지 않고 `aria-disabled="true"`로 준비 중 상태를 전달하되 키보드 포커스는 유지한다.
+- `Contact Us`는 인스타그램 `https://www.instagram.com/sarasun5502/`로 연결되는 네이티브 외부 앵커로 구현한다. 새 탭을 열고 `rel="noopener noreferrer"`, 새 창 안내가 포함된 접근 가능한 이름과 키보드 포커스를 제공한다.
 - 홈으로 돌아가기는 `Link href="/"`를 사용한다.
 
 ## 5. 시맨틱 HTML 구조
